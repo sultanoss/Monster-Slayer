@@ -85,6 +85,7 @@
       <h2>Battle Log</h2>
       <ul>
         <li v-for="logMessage in logMessages">
+          <!-- span output 'Player' or 'Monster' if action = player or monster -->
           <span
             :class="{'log--player': logMessage.action === 'player', 'log--monster': logMessage.action === 'monster'}"
           >{{ logMessage.action === 'player' ? 'Player' : 'Monster'
